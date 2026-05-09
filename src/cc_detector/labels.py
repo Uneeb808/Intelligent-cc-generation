@@ -8,9 +8,7 @@ instead of the specific 'Dog' or 'Bark' class.
 
 from __future__ import annotations
 
-# ── Blocklist ─────────────────────────────────────────────────────
-# Labels never CC-worthy. Be conservative — false negatives are worse.
-# Do NOT add broad animal/object categories here.
+
 BLOCKLIST: frozenset[str] = frozenset({
     "inside, small room",
     "inside, large room or hall",
@@ -126,8 +124,7 @@ LABEL_REMAPPING: dict[str, str] = {
     "piano":                            "MUSIC",
 }
 
-# Transient labels: short-duration events (1-2 YAMNet frames).
-# Consensus voting is BYPASSED for these — a single frame is enough.
+
 TRANSIENT_LABELS: frozenset[str] = frozenset({
     "DOG BARK", "CAT", "BIRD", "ANIMAL SOUND", "CLOCK TICKING",
     "GLASS", "GLASS BREAKING",

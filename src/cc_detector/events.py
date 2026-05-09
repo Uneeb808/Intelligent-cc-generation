@@ -22,22 +22,19 @@ def _fmt(seconds: float) -> str:
 
 @dataclass
 class SoundEvent:
-    # ── Core fields ──────────────────────────────────────────────
-    label:          str    # canonical display label, e.g. "GUNSHOT"
-    caption_en:     str    # English CC text, e.g. "[gunshot]"
-    caption_hi:     str    # Hindi CC text,   e.g. "[गोली की आवाज़]"
-    start_time:     float  # seconds from media start
-    end_time:       float  # seconds from media start
-    confidence:     float  # YAMNet peak frame score (0–1)
-    yamnet_raw:     str    # original YAMNet class label before remapping
+    label:          str    
+    caption_en:     str    
+    caption_hi:     str    
+    start_time:     float  
+    end_time:       float 
+    confidence:     float  
+    yamnet_raw:     str    
 
-    # ── Debug / transparency fields ──────────────────────────────
-    frame_count:    int   = 1     # how many YAMNet frames contributed
-    onset_source:   str   = "yamnet"  # "yamnet" | "onset" | "consensus"
-    spectral_gate:  bool  = False  # True if spectral check was applied
-    top_candidates: list  = field(default_factory=list)  # top-3 per peak frame
+    frame_count:    int   = 1     
+    onset_source:   str   = "yamnet" 
+    spectral_gate:  bool  = False  
+    top_candidates: list  = field(default_factory=list) 
 
-    # ── Derived ──────────────────────────────────────────────────
     @property
     def duration(self) -> float:
         return max(0.0, self.end_time - self.start_time)

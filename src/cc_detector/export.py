@@ -20,7 +20,6 @@ from pathlib import Path
 from .events import SoundEvent
 
 
-# ── Timestamp helpers ────────────────────────────────────────────
 
 def _srt_ts(sec: float) -> str:
     """Convert seconds to SRT timestamp: HH:MM:SS,mmm"""
@@ -36,7 +35,7 @@ def _sls_ts(sec: float) -> str:
     return _srt_ts(sec).replace(",", ".")
 
 
-# ── SRT export ───────────────────────────────────────────────────
+
 
 def write_srt(
     events: list[SoundEvent],
@@ -71,7 +70,6 @@ def write_srt(
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-# ── SLS export ───────────────────────────────────────────────────
 
 def write_sls(
     events: list[SoundEvent],
@@ -94,7 +92,6 @@ def write_sls(
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
-# ── JSON export ──────────────────────────────────────────────────
 
 def write_json(events: list[SoundEvent], path: Path) -> None:
     """Write full event list to JSON (pretty-printed)."""
@@ -104,7 +101,6 @@ def write_json(events: list[SoundEvent], path: Path) -> None:
                     encoding="utf-8")
 
 
-# ── CSV export ───────────────────────────────────────────────────
 
 _CSV_FIELDS = [
     "label", "caption_en", "caption_hi",

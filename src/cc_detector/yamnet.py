@@ -170,8 +170,8 @@ class DetectionStats:
         self.silent       = 0
         self.blocklist    = 0
         self.low_conf     = 0
-        self.onset_fail   = 0   # sustained labels with no onset
-        self.consensus    = 0   # rejected by consensus (sustained only)
+        self.onset_fail   = 0   
+        self.consensus    = 0   
         self.accepted     = 0
 
     def __repr__(self):
@@ -223,7 +223,7 @@ def detect(
     stats = DetectionStats()
     raw: list[dict] = []
 
-    # Per-label sliding window for consensus (sustained labels only)
+    # Per-label sliding window for consensus 
     label_history: dict[str, deque] = {}
 
     for frame_idx, frame_scores in enumerate(scores_np):
@@ -273,7 +273,7 @@ def detect(
         transient = is_transient(canonical)
 
         if transient:
-            # ── Transient path: accept immediately, no consensus ──
+            # ── Transient path: accept immediately
             stats.accepted += 1
             raw.append({
                 "timestamp":    ts,
@@ -288,7 +288,7 @@ def detect(
                 "frame_count":  1,
             })
         else:
-            # ── Sustained path: consensus voting + onset check ────
+        
             if canonical not in label_history:
                 label_history[canonical] = deque(maxlen=consensus_window)
             label_history[canonical].append(True)
@@ -318,9 +318,7 @@ def detect(
                 "frame_count":  1,
             })
 
-    # ── Onset transient pass ─────────────────────────────────────
-    # Catches very short events (<0.2 s) that YAMNet's 0.96 s window dilutes.
-    # Labels them from YAMNet's top-1 at that timestamp (not generic "IMPACT").
+    
     transient_raw: list[dict] = []
     if use_onset_pass:
         try:
