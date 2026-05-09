@@ -1,0 +1,39 @@
+1
+00:00:07,200 --> 00:00:09,200
+[dog bark]
+% conf=0.550 frames=3 src=yamnet
+
+2
+00:00:15,808 --> 00:00:17,808
+[clock ticking]
+% conf=0.997 frames=1 src=onset
+
+3
+00:00:28,896 --> 00:00:31,304
+[phone ring]
+% conf=0.974 frames=3 src=onset
+
+4
+00:00:32,640 --> 00:00:34,640
+[phone ring]
+% conf=0.911 frames=3 src=yamnet
+
+5
+00:00:34,688 --> 00:00:36,688
+[phone ring]
+% conf=0.550 frames=1 src=onset
+
+6
+00:00:38,304 --> 00:00:40,304
+[impact]
+% conf=0.550 frames=1 src=onset
+
+7
+00:00:52,352 --> 00:00:54,352
+[impact]
+% conf=0.550 frames=1 src=onset
+
+8
+00:00:54,720 --> 00:00:56,720
+[gunshot]
+% conf=0.906 frames=1 src=yamnet

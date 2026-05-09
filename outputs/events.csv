@@ -1,0 +1,9 @@
+label,caption_en,caption_hi,start_time,end_time,start_timestamp,end_timestamp,duration,confidence,frame_count,onset_source,yamnet_raw
+DOG BARK,[dog bark],[कुत्ते की आवाज़],7.2,8.64,00:00:07.200,00:00:08.640,1.44,0.55,3,yamnet,"Domestic animals, pets"
+CLOCK TICKING,[clock ticking],[घड़ी की टिक-टिक],15.808,16.808,00:00:15.808,00:00:16.808,1.0,0.9967,1,onset,onset_transient
+PHONE RING,[phone ring],[फ़ोन की घंटी],28.896,30.804,00:00:28.896,00:00:30.804,1.908,0.9736,3,onset,onset_transient
+PHONE RING,[phone ring],[फ़ोन की घंटी],32.64,34.08,00:00:32.640,00:00:34.080,1.44,0.9115,3,yamnet,Ringtone
+PHONE RING,[phone ring],[फ़ोन की घंटी],34.688,35.688,00:00:34.688,00:00:35.688,1.0,0.55,1,onset,onset_transient
+IMPACT,[impact],[धमाके की आवाज़],38.304,39.304,00:00:38.304,00:00:39.304,1.0,0.55,1,onset,onset_transient
+IMPACT,[impact],[धमाके की आवाज़],52.352,53.352,00:00:52.352,00:00:53.352,1.0,0.55,1,onset,onset_transient
+GUNSHOT,[gunshot],[गोली की आवाज़],54.72,55.72,00:00:54.720,00:00:55.720,1.0,0.9062,1,yamnet,"Gunshot, gunfire"
