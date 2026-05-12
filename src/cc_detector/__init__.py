@@ -13,4 +13,4 @@ Improvements over baseline YAMNet approaches:
 """
 
 __version__ = "0.2.0"
-__author__  = "Govind Gupta"
+
