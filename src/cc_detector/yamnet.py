@@ -50,7 +50,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 
 YAMNET_URL       = "https://tfhub.dev/google/yamnet/1"
 YAMNET_FRAME_HOP = 0.48   # seconds between frames
-YAMNET_FRAME_WIN = 0.96   # window size
+YAMNET_FRAME_WIN = 0.96   
 
 _yamnet_model   = None
 _yamnet_classes = None
