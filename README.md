@@ -17,7 +17,6 @@ This PR delivers a fully working **Module 1** (Sound Event Detection → SRT/SLS
 
 ```
 INPUT VIDEO
-    │
     ├──▶ AUDIO EXTRACTION (imageio-ffmpeg, no system install needed)
     │           │
     │    ┌──────┴──────┐
